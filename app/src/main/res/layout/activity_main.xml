@@ -11,7 +11,7 @@
     android:fillViewport="true"
     android:orientation="vertical">
 
-        <LinearLayout
+        <android.support.constraint.ConstraintLayout
             android:id="@+id/lnlLogin"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -26,9 +26,11 @@
                 android:gravity="center"
                 android:orientation="vertical"
                 android:weightSum="1"
-                app:layout_constraintVertical_bias="1"
+                app:layout_constraintVertical_chainStyle="spread_inside"
                 app:layout_constraintBottom_toTopOf="@+id/linear2"
-                app:layout_constraintTop_toTopOf="parent" />
+                app:layout_constraintTop_toTopOf="parent"
+                tools:layout_editor_absoluteX="0dp"
+                tools:ignore="MissingConstraints" />
 
             <LinearLayout
                 android:id="@+id/linear2"
@@ -56,7 +58,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:gravity="center_horizontal"
-                    android:text=""
+                    android:text="Texto 2"
 
                     android:textSize="22sp" />
 
@@ -212,18 +214,20 @@
 
             <ImageView
                 android:id="@+id/imgBottom"
-                android:visibility="visible"
                 android:layout_width="match_parent"
                 android:layout_height="55dp"
                 android:layout_gravity="bottom"
-
                 android:background="@android:color/holo_green_dark"
+
+                android:visibility="visible"
                 app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintVertical_bias="1"
-                app:layout_constraintTop_toBottomOf="@+id/linear2" />
+                app:layout_constraintTop_toBottomOf="@+id/linear2"
 
 
-        </LinearLayout>
+                tools:ignore="MissingConstraints" />
+
+
+        </android.support.constraint.ConstraintLayout>
 
 
 
